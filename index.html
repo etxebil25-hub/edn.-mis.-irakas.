@@ -1864,7 +1864,7 @@ const PROBAK = {
           if (!big || !small) return fb('bad', 'Idatzi marka handiaren eta denda txikiaren izenak.');
           if (sel.size < 3) return fb('bad', 'Aukeratu gutxienez 3 galdera.');
           const qs = [...sel].sort().map(i => '- ' + at.qs[i]).join('\n');
-          const mk = (to) => `Kaixo, ${to}:\n\n${school} eskolako 5. eta 6. mailako ikasleak gara. Arropari buruz ikasten ari gara, eta galdera batzuk ditugu:\n${qs}\n\nEskerrik asko zuen erantzunagatik!\n${S.team} taldea`;
+          const mk = (to) => `Kaixo, ${to}:\n\n${school} eskolako 6. mailako ikasleak gara. Arropari buruz ikasten ari gara, eta galdera batzuk ditugu:\n${qs}\n\nEskerrik asko zuen erantzunagatik!\n${S.team} taldea`;
           $('#msgs').innerHTML = [big, small].map((to, k) => `<h3>${k ? 'Denda txikiari' : 'Marka handiari'}</h3><div class="msg" id="msg${k}">${esc(mk(to))}</div><div class="row"><button class="ghost" data-k="${k}" type="button">Kopiatu mezua</button></div>`).join('');
           $$('#msgs button').forEach(b => b.onclick = () => {
             const el = $('#msg' + b.dataset.k);
